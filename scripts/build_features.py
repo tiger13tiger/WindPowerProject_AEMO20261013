@@ -10,7 +10,8 @@ is reproducible from silver by definition. `data/ml/features/` is gitignored.
 The readiness check is the other half of this script, and the more important
 half today. A model trained on four days of data will produce numbers, and the
 numbers will be meaningless; `ready()` says so with the counts, and
-`train_forecast.py` is expected to refuse rather than proceed. Spike models are
+`train_forecast.py` refuses rather than proceeds — or, given
+`--provisional`, runs anyway and labels every row of its output. Spike models are
 the binding constraint — SA1 can go a week without a single interval above
 $300, and a classifier cannot learn from zero positives.
 """

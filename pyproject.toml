@@ -21,6 +21,16 @@ reference = [
     "xlrd>=2.0",
     "python-calamine>=0.2",
 ]
+# Only for scripts/train_forecast.py, installed by the ML workflow and nothing
+# else: these wheels are tens of megabytes and the hourly ingest must stay on
+# plain `.`. CLAUDE.md names lightgbm here too; it is left out because
+# HistGradientBoosting covers this and a second tree library would be weight
+# without a question it answers better.
+ml = [
+    "scikit-learn>=1.5",
+    "pandas>=2.2",
+    "numpy>=1.26",
+]
 
 [tool.setuptools]
 # Nothing here is an importable package: scripts/ is a script directory that
