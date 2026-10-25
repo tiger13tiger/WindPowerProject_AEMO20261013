@@ -368,11 +368,16 @@ runs on demand and which writes nothing.
 27. `scripts/build_features.py` + `sql/ml/features.sql`: one row per region per
     interval, 43 columns, derived and not committed. ✓
 28. `scripts/train_forecast.py`: walk-forward training for four targets, with
-    the purge and embargo described in section 4. **Harness done, model
-    pending** — `walkforward.py` cuts the folds, `sql/ml/baselines.sql` builds
-    the three comparators and `metrics.py` scores them. The estimator itself
-    waits on data: `build_features.py --check` refuses below 60 days and 30
-    spike episodes per region.
+    the purge and embargo described in section 4. ✓ **Built, and refusing by
+    default** — the 60-day gate holds, and `--provisional` runs on short
+    history with every output row stamped `provisional`. On the first such run
+    (14.4 days, one fold, 6.9 days of training) the mean model reached parity
+    with persistence in QLD1 and VIC1 and was marginally ahead in SA1, while
+    NSW1 at 120 minutes came in at MAE 84 against persistence's 12 — a median
+    error of 19 and a **+71 bias**, which is the model applying one week's
+    price level to the next. That is the gate earning its keep rather than a
+    bug, and the reason the number is labelled instead of lowered. Spike
+    models scored nothing: no test fold held a positive.
 29. `scripts/backtest_battery.py`: arbitrage simulation driven by the forecast,
     measured against perfect foresight and a no-forecast threshold rule. ✓
 30. Dashboard panels for forecast error against the baselines, spike
