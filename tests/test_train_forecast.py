@@ -14,10 +14,15 @@ import train_forecast as tf
 
 @pytest.fixture
 def con() -> duckdb.DuckDBPyConnection:
-    """A `scored` view shaped like the real one, with one row."""
+    """`_features` and the joined `scored` view, shaped like the real ones.
+
+    Built the way `baselines.assemble` builds them — the feature model on its
+    own, then the comparators joined on — because that separation is the thing
+    under test.
+    """
     con = duckdb.connect()
     con.execute("""
-        CREATE TEMP VIEW scored AS SELECT
+        CREATE TEMP TABLE _features AS SELECT
             'NSW1' AS region,
             '2026-10-01 00:00:00+00'::TIMESTAMPTZ AS interval_start_utc,
             '2026-10-01 10:00:00+10'::TIMESTAMPTZ AS interval_start_nem,
@@ -26,13 +31,18 @@ def con() -> duckdb.DuckDBPyConnection:
             60.0 AS y_mean_60, 61.0 AS y_mean_120,
             0.0 AS y_spike_60, 0.0 AS y_spike_120,
             12 AS y_intervals_60, 24 AS y_intervals_120,
-            49.0 AS rrp_lag_5, 7.0 AS wind_mw,
+            49.0 AS rrp_lag_5, 7.0 AS wind_mw
+    """)
+    con.execute("""
+        CREATE TEMP VIEW scored AS SELECT f.*,
             51.0 AS persist_mean_60, 0.0 AS persist_spike_60,
             52.0 AS persist_mean_120, 0.0 AS persist_spike_120,
             53.0 AS yest_mean_60, 0.0 AS yest_spike_60,
             54.0 AS yest_mean_120, 0.0 AS yest_spike_120,
             55.0 AS clim_mean_rrp, 0.0 AS clim_spike_rate,
-            56.0 AS p5_mean_60, 0.0 AS p5_spike_60, 11 AS p5_intervals_60
+            56.0 AS p5_mean_60, 0.0 AS p5_spike_60, 11 AS p5_intervals_60,
+            57.0 AS pd_mean_120, 0.0 AS pd_spike_120, 24 AS pd_intervals_120
+        FROM _features f
     """)
     yield con
     con.close()
@@ -47,16 +57,32 @@ def test_keys_and_targets_are_not_features(con: duckdb.DuckDBPyConnection) -> No
 
 
 def test_the_models_own_comparators_are_not_features(con: duckdb.DuckDBPyConnection) -> None:
-    """Beating persistence must not be achievable by reading persistence.
+    """Beating a baseline must not be achievable by reading that baseline.
 
-    Every baseline column is derived from history the features already carry,
-    so including one would not teach the model anything new — it would just
-    turn "the model beat persistence" into "the model learned to copy it".
+    Every comparator is derived from history the features already carry, so
+    including one would not teach the model anything new — it would just turn
+    "the model beat persistence" into "the model learned to copy it".
     """
     features = tf.feature_columns(con)
     for column in ("persist_mean_60", "yest_mean_120", "clim_mean_rrp", "p5_mean_60"):
         assert column not in features
+
+
+def test_a_new_baselines_bookkeeping_cannot_become_a_feature(
+    con: duckdb.DuckDBPyConnection,
+) -> None:
+    """The regression that prompted reading `_features` instead of `scored`.
+
+    `pd_intervals_120` says how many of the 24 target intervals AEMO actually
+    forecast. It is knowable at `t`, so it is not leakage and no leakage test
+    saw it — but it is a comparator's own bookkeeping, and it reached the model
+    as a feature because it matched no name on a hand-kept exclusion list.
+    Anything a join adds must stay out without being named.
+    """
+    features = tf.feature_columns(con)
+    assert "pd_intervals_120" not in features
     assert "p5_intervals_60" not in features
+    assert not [f for f in features if f.startswith(("pd_", "p5_"))]
 
 
 def test_interval_t_own_price_stays_a_feature(con: duckdb.DuckDBPyConnection) -> None:
