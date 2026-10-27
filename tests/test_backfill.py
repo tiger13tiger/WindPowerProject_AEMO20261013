@@ -79,7 +79,7 @@ def hour(day: date, h: int) -> datetime:
 
 
 def rows_in(path: Path) -> int:
-    return duckdb.sql(f"SELECT count(*) FROM read_parquet('{path}')").fetchone()[0]
+    return duckdb.connect().execute(f"SELECT count(*) FROM read_parquet('{path}')").fetchone()[0]
 
 
 AUG1, AUG2, AUG3, AUG4 = (date(2026, 8, d) for d in (1, 2, 3, 4))
@@ -184,12 +184,13 @@ def test_reopen_removes_only_sealed_incomplete_days(
 ) -> None:
     path = tmp_path / "price" / "date=2026-10-11.parquet"
     path.parent.mkdir(parents=True)
-    duckdb.sql(
+    con = duckdb.connect()
+    con.execute(
         f"COPY (SELECT {str(complete).lower()} AS is_complete, 129 AS intervals_present) "
         f"TO '{path}' (FORMAT PARQUET)"
     )
     outside = tmp_path / "price" / "date=2026-09-30.parquet"
-    duckdb.sql(f"COPY (SELECT false AS is_complete) TO '{outside}' (FORMAT PARQUET)")
+    con.execute(f"COPY (SELECT false AS is_complete) TO '{outside}' (FORMAT PARQUET)")
 
     reopen_sealed_days(date(2026, 10, 1), date(2026, 10, 12), tmp_path)
 
