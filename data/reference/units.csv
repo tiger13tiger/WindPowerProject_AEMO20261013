@@ -1,0 +1,574 @@
+duid,station_name,region,fuel_group,fuel_type,technology_type,dispatch_type,schedule_type,capacity_mw
+ADPBA1,Adelaide Desalination Plant,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,7.76
+ADPMH1,Adelaide Desalination Plant,SA1,other,Water,Run of River,Generating Unit,Non-Scheduled,1.44
+ADPPV1,Adelaide Desalination Plant,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,24.75
+ADPPV2,Adelaide Desalination Plant,SA1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Non-Scheduled,0.2
+ADPPV3,Adelaide Desalination Plant,SA1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Non-Scheduled,0.02
+AGLHAL,Hallett Power Station,SA1,other,Natural Gas / Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,217.0
+AGLSOM,Somerton Power Station,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,170.0
+ALDGASF1,Aldoga Solar Farm,QLD1,solar,Solar,Photovoltalic Tracking Flat Panel,Generating Unit,Semi-Scheduled,535.213
+ANGAST1,Angaston Power Station,SA1,other,Diesel,Compression Reciprocating Engine,Generating Unit,Scheduled,50.0
+APPIN,Appin Power Plant,NSW1,other,Waste Coal Mine Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,55.6
+ARWF1,Ararat Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,241.59
+AVLSF1,Avonlie Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,254.1
+BAKING1,Baking Board Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,17.5
+BALB1,Ballarat Battery Energy Storage System,VIC1,battery,Grid,Battery,Bidirectional Unit,Scheduled,30.0
+BALDHWF1,Bald Hills Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,106.6
+BANGOWF1,Bango 973 Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,159.0
+BANGOWF2,Bango 999 Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,84.8
+BANN1,Bannerton Solar Park,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,100.0
+BAPS,Banimboola Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,12.85
+BARCALDN,Barcaldine Power Station,QLD1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Scheduled,37.0
+BARCSF1,Barcaldine Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,20.0
+BARKIPS1,Barker Inlet Power Station,SA1,other,Natural Gas,Compression Reciprocating Engine,Generating Unit,Scheduled,211.0
+BARRON-1,Barron Gorge Power Station,QLD1,other,Water,Run of River,Generating Unit,Scheduled,30.0
+BARRON-2,Barron Gorge Power Station,QLD1,other,Water,Run of River,Generating Unit,Scheduled,30.0
+BASTYAN,Bastyan Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,79.9
+BBATTERY1,Bouldercombe Battery Project,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,67.0
+BBTHREE1,Bell Bay Three Power Station,TAS1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,35.0
+BBTHREE2,Bell Bay Three Power Station,TAS1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,35.0
+BBTHREE3,Bell Bay Three Power Station,TAS1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,35.0
+BDL01,Bairnsdale Power Station,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,46.0
+BDL02,Bairnsdale Power Station,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,46.0
+BDONGHYD,Burrendong Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,19.0
+BERYLSF1,Beryl Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,98.0
+BHB1,Broken Hill Battery Energy Storage System,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,66.0
+BLOWERNG,Blowering Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,80.0
+BLUEGSF1,Blue Grass Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,183.0
+BLUFF1,The Bluff Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,52.5
+BLYTHB1,Blyth Battery Energy Storage System,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,281.0
+BNGSF1,Bungala One Solar Farm,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,135.0
+BNGSF2,Bungala Two Solar Farm,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,135.0
+BOCORWF1,Boco Rock Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,113.18
+BODWF1,Bodangora Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,113.19
+BOLIVAR1,Bolivar Waste Water Treatment Plant,SA1,other,Sewerage / Waste Water,Pump Storage,Generating Unit,Non-Scheduled,9.9
+BOLIVPS1,Bolivar Power Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,128.0
+BOMENSF1,Bomen Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,121.0
+BOWWBA1,Bolivar Waste Water Treatment Plant,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,3.0
+BOWWDG1,Bolivar Waste Water Treatment Plant,SA1,other,Diesel,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,0.66
+BOWWPV1,Bolivar Waste Water Treatment Plant,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,8.25
+BPLANDF1,Browns Plains Landfill Gas PS,QLD1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,2.0
+BRAEMAR1,Braemar Power Station,QLD1,other,Coal Seam Methane,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,168.0
+BRAEMAR2,Braemar Power Station,QLD1,other,Coal Seam Methane,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,168.0
+BRAEMAR3,Braemar Power Station,QLD1,other,Coal Seam Methane,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,168.0
+BRAEMAR5,Braemar 2 Power Station,QLD1,other,Coal Seam Methane,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,173.0
+BRAEMAR6,Braemar 2 Power Station,QLD1,other,Coal Seam Methane,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,173.0
+BRAEMAR7,Braemar 2 Power Station,QLD1,other,Coal Seam Methane,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,173.0
+BRDDBES1,Broadsound Energy Park,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,240.0
+BRDDSF01,Broadsound Energy Park,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,368.0
+BRNDBES1,Brendale BESS,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,215.0
+BROKENH1,Broken Hill Solar Plant,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,53.76
+BROOKLYN,Brooklyn LFG U1-3,VIC1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,2.83
+BROWNMT,Brown Mountain Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,5.0
+BRYB1WF1,Berrybank Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,180.6
+BRYB2WF2,Berrybank 2 Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,109.0
+BULBES1,Bulgana Green Power Hub,VIC1,battery,Grid,Battery,Bidirectional Unit,Scheduled,24.0
+BULGANA1,Bulgana Green Power Hub,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,204.0
+BUNGAMB1,Bungama Battery Energy Storage System,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,217.0
+BURRIN,Burrinjuck Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,34.0
+BUSF1,Bundaberg Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,101.0
+BUTLERSG,Butlers Gorge Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,14.4
+BW01,Bayswater Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,660.0
+BW02,Bayswater Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,660.0
+BW03,Bayswater Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,660.0
+BW04,Bayswater Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,660.0
+BWTR1,Broadwater Power Station,NSW1,other,Bagasse,Steam Sub-Critical,Generating Unit,Non-Scheduled,38.0
+CALL_B_1,Callide Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,350.0
+CALL_B_2,Callide Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,350.0
+CAPBES1,Capital Battery,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,125.0
+CAPTL_WF,Capital Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,140.0
+CATHROCK,Cathedral Rocks,SA1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled*,66.0
+CBWF1,Coonooer Bridge Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,19.8
+CBWWBA1,Christies Beach Wastewater Treatment Plant,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,2.16
+CBWWBG1,Christies Beach Wastewater Treatment Plant,SA1,other,Biogas - sludge,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,0.664
+CBWWDG1,Christies Beach Wastewater Treatment Plant,SA1,other,Diesel,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,2.0
+CBWWDG2,Christies Beach Wastewater Treatment Plant,SA1,other,Diesel,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,0.72
+CBWWPV1,Christies Beach Wastewater Treatment Plant,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,2.75
+CBWWPV2,Christies Beach Wastewater Treatment Plant,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,1.08
+CESF1,Capital East Solar Farm,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Non-Scheduled,0.205
+CETHANA,Cethana Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,85.0
+CG1,Colongra Power Station,NSW1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,181.0
+CG2,Colongra Power Station,NSW1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,181.0
+CG3,Colongra Power Station,NSW1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,181.0
+CG4,Colongra Power Station,NSW1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,181.0
+CGBESS01,Clements Gap BESS,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,90.5
+CHALLHWF,Challicum Hills Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,52.5
+CHBESS1,"Chinchilla BESS, Units 1-80",QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,134.0
+CHILDSF1,Childers Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,64.38
+CHPSTWF1,Chepstowe Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,6.15
+CHYTWF1,Cherry Tree Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,57.6
+CLARESF1,Clare Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,110.262
+CLAYTON,Clayton Landfill Gas Power Station,VIC1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,11.0
+CLEMGPWF,Clements Gap Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,57.0
+CLERMSF1,Clermont Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,92.5
+CLOVER,Clover Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,37.5
+CLRKCWF1,Clarke Creek Wind Farm,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,345.5
+CLRKCWF2,Clarke Creek Wind Farm,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,103.5
+CLUNY,Cluny Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,19.0
+CNUNDAWF,Canunda Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled*,46.0
+CODRNGTON,Codrington Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,18.2
+COHUNSF1,Cohuna Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,31.0
+COLEASF1,Coleambally Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,180.0
+COLUMSF1,Columboola Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,217.0
+COLWF01,Collector Wind Farm 1,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,226.0
+CONDONG1,Condong Power Station,NSW1,other,Bagasse,Steam Sub-Critical,Generating Unit,Non-Scheduled,30.0
+COOPGWF1,Coopers Gap Wind Farm,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,452.0
+COPTNHYD,Copeton Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,22.5
+CPP_3,Callide C Nett Off,QLD1,other,Black Coal,Steam Super Critical,Generating Unit,Scheduled,466.0
+CPP_4,Callide C Nett Off,QLD1,other,Black Coal,Steam Super Critical,Generating Unit,Scheduled,420.0
+CPSA,Condamine Power Station A,QLD1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Scheduled,143.0
+CROOKWF2,Crookwell 2 Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,96.04
+CROOKWF3,Crookwell 3 Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,57.0
+CROWLWF1,Crowlands Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,79.95
+CRURWF1,Crudine Ridge Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,141.0
+CRWARP1,Carwarp Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,186.0
+CRWASF1,Corowa Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,36.0
+CSPVPS1,Collinsville Solar PV Power Station,QLD1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,42.0
+CTHLWF1,Cattle Hill Wind Farm,TAS1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,148.0
+CULLRGWF,Cullerin Range Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,30.0
+CUSF1,Culcairn Solar Farm,NSW1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,466.0
+DALNTH1,Dalrymple North BESS,SA1,battery,Grid,Battery,Bidirectional Unit,Scheduled,30.0
+DARLSF1,Darlington Point Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,324.0
+DARTM1,Dartmouth Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,185.0
+DAYDSF1,Daydream Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,167.0
+DDPS1,Darling Downs Power Station,QLD1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Scheduled,644.0
+DDSF1,Darling Downs Solar Farm,QLD1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,121.0
+DEVILS_G,Devils Gate Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,60.0
+DIAPURWF1,Diapur Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,8.0
+DPNTB1,Darlington Point Energy Storage System,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,25.0
+DRYCGT1,Dry Creek Gas Turbine Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,52.0
+DRYCGT2,Dry Creek Gas Turbine Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,52.0
+DRYCGT3,Dry Creek Gas Turbine Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,52.0
+DULAWF1,Dulacca Wind Farm,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,180.0
+DUNDWF1,Dundonnell Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,168.0
+DUNDWF2,Dundonnell Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,46.0
+DUNDWF3,Dundonnell Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,121.0
+EASTCRK,Eastern Creek LFG PS Units 1-4,NSW1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,5.056
+EASTCRK2,Eastern Creek 2 Gas Utilisation Facility,NSW1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,4.492
+EDENVSF1,Edenvale Solar Park,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,180.0
+EILDON1,Eildon Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,60.0
+EILDON2,Eildon Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,60.0
+EILDON3,Eildon Power Station,VIC1,other,Water,Run of River,Generating Unit,Non-Scheduled,4.5
+ELAINWF1,Elaine Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,83.6
+EMERASF1,Emerald Solar Park,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,88.0
+ER01,Eraring Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,720.0
+ER02,Eraring Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,720.0
+ER03,Eraring Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,720.0
+ER04,Eraring Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,720.0
+ERB01,Eraring Battery Energy Storage System,NSW1,battery,Grid,Battery,Bidirectional Unit,Scheduled,614.6
+ERB02,Eraring Battery Energy Storage System 2,NSW1,battery,Grid,Battery,Bidirectional Unit,Scheduled,351.0
+ERGT01,Eraring Power Station,NSW1,other,Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,41.5
+FINLYSF1,Finley Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,162.36
+FISHER,Fisher Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,43.2
+FLYCRKWF,Flyers Creek Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,145.0
+FNWF1,Ferguson North Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,4.0
+FSWF1,Ferguson South Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,8.0
+GANGARR1,Gangarri Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,162.0
+GANNB1,Gannawarra Energy Storage System,VIC1,battery,Grid,Battery,Bidirectional Unit,Scheduled,30.0
+GANNSF1,Gannawarra Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,55.0
+GB01,Broken Hill Gas Turbines,NSW1,other,Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,50.0
+GERMCRK,German Creek Power Station,QLD1,other,Waste Coal Mine Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,44.976
+GESF1,Glenellen Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,264.0
+GIRGSF,Girgarre Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,93.31
+GLBWNHYD,Glenbawn Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,5.5
+GLENMAG1,Glenmaggie Hydro Power Station,VIC1,other,Water,Run of River,Generating Unit,Non-Scheduled,3.8
+GLENNCRK,Glennies Creek Power Station,NSW1,other,Waste Coal Mine Gas,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,12.78
+GLENSF1,Glenrowan Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,126.0
+GLRWNSF1,Glenrowan West Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,132.0
+GNNDHSF1,Gunnedah Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,144.0
+GOESF1,Goorambat East Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,348.6
+GOONSF1,Goonumbla Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,85.0
+GORDON,Gordon Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,432.0
+GPWFEST1,Golden Plains Wind Farm East,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,248.0
+GPWFEST2,Golden Plains Wind Farm East,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,260.4
+GPWFEST3,Golden Plains Wind Farm East,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,248.0
+GPWFWST1,Golden Plains Wind Farm West,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,266.0
+GPWFWST2,Golden Plains Wind Farm West,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,310.0
+GRANGEAV,Grange Avenue Landfill Gas Power Station,NSW1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,2.0
+GRANWF1,Granville Harbour Wind Farm,TAS1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,110.0
+GREENB1,Greenbank BESS,QLD1,battery,Grid,Battery,Bidirectional Unit,Scheduled,259.2
+GRIFSF1,Griffith Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,27.2
+GROSV1,Grosvenor 1 Waste Coal Mine Gas Power Station,QLD1,other,Waste Coal Mine Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,21.287
+GROSV2,Grosvenor 2,QLD1,other,Waste Coal Mine Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,15.205
+GSTONE1,Gladstone Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,280.0
+GSTONE2,Gladstone Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,280.0
+GSTONE3,Gladstone Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,280.0
+GSTONE4,Gladstone Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,280.0
+GSTONE5,Gladstone Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,280.0
+GSTONE6,Gladstone Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,280.0
+GSWF1A,Goyder South Wind Farm 1A,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,209.0
+GSWF1B1,Goyder South Wind Farm 1B,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,203.0
+GULLRSF1,Gullen Range Solar Farm,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,10.0
+GULLRWF1,Gullen Range Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,165.0
+GULLRWF2,Gullen Range Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,110.0
+GUNNING1,Gunning Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,46.5
+GUSF1,Gunsynd Solar Farm,QLD1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,122.775
+GUTHEGA,Guthega Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,60.0
+HALAMRD1,Hallam Road Renewable Energy Facility,VIC1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,8.984
+HALLWF1,Hallett 1 Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,94.5
+HALLWF2,Hallett 2 Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,71.4
+HAMISF1,Hamilton Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,57.5
+HASTING1,Hastings Generation Site,VIC1,other,Ethane,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,14.817
+HASTING2,Hastings Generation Site,VIC1,other,Ethane,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,14.817
+HASTING3,Hastings Generation Site,VIC1,other,Ethane,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,14.817
+HAUGHT11,Haughton Solar Farm Stage 1,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,132.0
+HAYMSF1,Hayman Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,57.75
+HBESS1,Hazelwood Battery Energy Storage System,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,200.0
+HD1WF1,Hawkesdale Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,96.6
+HDWF1,Hornsdale Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,102.4
+HDWF2,Hornsdale Wind Farm 2,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,102.4
+HDWF3,Hornsdale Wind Farm 3,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,112.0
+HEPWIND1,Hepburn Community Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,4.1
+HEZ1,Hunter Economic Zone,NSW1,other,Diesel,Compression Reciprocating Engine,Generating Unit,Scheduled,28.0
+HILLSTN1,Hillston Sun Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,110.0
+HLMSEW01,South East Water - Halllam Hydro Plant,VIC1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,0.25
+HPR1,Hornsdale Power Reserve,SA1,battery,Wind,Battery and Inverter,Bidirectional Unit,Scheduled,150.0
+HUGSF1,Hughenden Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,20.97
+HUMENSW,Hume (NSW) Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,29.0
+HUMEV,Hume (Vic) Hydro Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,29.0
+HUNTER1,Hunter Power Station,NSW1,other,Natrual Gas/ Diesel,OCGT,Generating Unit,Scheduled,375.0
+HUNTER2,Hunter Power Station,NSW1,other,Natrual Gas/ Diesel,OCGT,Generating Unit,Scheduled,375.0
+HVWWBA1,Happy Valley Water Treatment Plant,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,5.0
+HVWWPV1,Happy Valley Water Treatment Plant,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,11.0
+ICSM,ISIS Central Sugar Mill Co-generation Plant,QLD1,other,Bagasse,Steam Sub-Critical,Generating Unit,Non-Scheduled,25.0
+INVICTA,Invicta Sugar Mill,QLD1,other,Bagasse,Steam Sub-Critical,Generating Unit,Non-Scheduled,50.3
+JACKSGUL,Jacks Gully Landfill Gas Power Station,NSW1,other,Landfill Methane / Landfill Gas,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,2.3
+JBUTTERS,John Butters Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,144.0
+JEMALNG1,Jemalong Solar Project,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,55.0
+JLA01,"Jeeralang ""A"" Power Station",VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,51.0
+JLA02,"Jeeralang ""A"" Power Station",VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,51.0
+JLA03,"Jeeralang ""A"" Power Station",VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,51.0
+JLA04,"Jeeralang ""A"" Power Station",VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,51.0
+JLB01,"Jeeralang ""B"" Power Station",VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,76.0
+JLB02,"Jeeralang ""B"" Power Station",VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,76.0
+JLB03,"Jeeralang ""B"" Power Station",VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,76.0
+JNDABNE1,Jindabyne Small Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,1.1
+JOUNAMA1,Jounama Small Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,14.0
+JUNEESF1,Junee Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,36.0
+KABANWF1,Kaban Wind Farm,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,156.0
+KAREEYA1,Kareeya Power Station,QLD1,other,Water,Run of River,Generating Unit,Scheduled,21.0
+KAREEYA2,Kareeya Power Station,QLD1,other,Water,Run of River,Generating Unit,Scheduled,21.0
+KAREEYA3,Kareeya Power Station,QLD1,other,Water,Run of River,Generating Unit,Scheduled,21.0
+KAREEYA4,Kareeya Power Station,QLD1,other,Water,Run of River,Generating Unit,Scheduled,21.0
+KAREEYA5,Kareeya Power Station,QLD1,other,Water,Run of River,Generating Unit,Non-Scheduled,7.0
+KARSF1,Karadoc Solar Farm,VIC1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,104.0
+KEEPIT,Keepit Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,6.0
+KEPBG1,Kennedy Energy Park Battery,QLD1,battery,Grid,Battery,Generating Unit,Non-Scheduled,2.0
+KEPBL1,Kennedy Energy Park Battery,QLD1,battery,Grid,Battery,Load,Non-Scheduled,2.0
+KEPSF1,Kennedy Energy Park,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,16.0
+KEPWF1,Kennedy Energy Park,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,43.0
+KERNGSP1,Kerang Solar Plant,VIC1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,37.0
+KESSB1,Koorangie Energy Storage System,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,185.0
+KIAMSF1,Kiamal Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,239.0
+KIATAWF1,Kiata Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,31.05
+KIDSPHG1,Kidston Hydro Project,QLD1,other,Water,Pump Storage,Generating Unit,Scheduled,126.0
+KINGASF1,Kingaroy Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,47.0
+KPP_1,Kogan Creek Power Station,QLD1,other,Black Coal,Steam Super Critical,Generating Unit,Scheduled,744.0
+KSP1,Kidston Solar Project Phase One,QLD1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,50.0
+LADBROK1,Ladbroke Grove Power Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,40.0
+LADBROK2,Ladbroke Grove Power Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,40.0
+LANCSF1,Lancaster Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,94.0
+LBB1,Lake Bonney BESS1,SA1,battery,Grid,Battery,Bidirectional Unit,Scheduled,25.0
+LDBESS1,Liddell Battery Energy Storage System,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,755.08
+LEM_WIL,Lemonthyme / Wilmot Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,81.6
+LGAPBS1,Lincoln Gap Wind Farm Battery,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,10.8
+LGAPWF1,Lincoln Gap Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,126.0
+LGAPWF2,Lincoln Gap Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,86.0
+LILYSF1,Lilyvale Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,118.0
+LIMBESS1,Limondale Battery,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,141.0
+LIMOSF11,Limondale Solar Farm 1,NSW1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,275.0
+LIMOSF21,Limondale Solar Farm 2,NSW1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,38.0
+LI_WY_CA,Catagunya / Liapootah / Wayatinah Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,173.7
+LKBONNY1,Lake Bonney Wind Farm Stage 1,SA1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled*,80.5
+LKBONNY2,Lake Bonney Stage 2 Windfarm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,159.0
+LKBONNY3,Lake Bonney Stage 3 Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,39.0
+LK_ECHO,Lake Echo Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,32.4
+LNGS1,Laverton North Power Station,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,156.0
+LNGS2,Laverton North Power Station,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,156.0
+LONGFORD,Longford Plant,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,22.0
+LONSDALE,Lonsdale Power Station,SA1,other,Diesel,Compression Reciprocating Engine,Generating Unit,Scheduled,20.0
+LOYYB1,Loy Yang B Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,500.0
+LOYYB2,Loy Yang B Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,500.0
+LRSF1,Longreach Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,17.0
+LUCAS2S2,Lucas Heights 2 Power Station,NSW1,other,Landfill Methane / Landfill Gas,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,4.6
+LUCASHGT,Lucas Heights 2 Power Station,NSW1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,12.65
+LVES1,Latrobe Valley BESS,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,140.0
+LYA1,Loy Yang A Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,560.0
+LYA2,Loy Yang A Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,530.0
+LYA3,Loy Yang A Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,560.0
+LYA4,Loy Yang A Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,560.0
+MACARTH1,Macarthur Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,420.0
+MACKNTSH,Mackintosh Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,79.9
+MANNSF2,Mannum 2 Solar Farm,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,37.0
+MANNUMB1,Mannum Battery Energy Storage System,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,131.7
+MANSLR1,Manildra solar Farm,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,50.0
+MAPS2PV1,"Mannum - Adelaide Pipeline Pumping Station No 2, PV Units 1-6",SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,16.5
+MAPS3PV1,"Mannum - Adelaide Pipeline Pumping Station No 3, PV Units 1-6",SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,16.5
+MAROOWF1,Maroona Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,6.8
+MARYRSF1,Maryrorough Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,33.0
+MBAHNTH,Moranbah North Waste Coal Mine Gas Power Station,QLD1,other,Waste Coal Mine Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,63.42
+MBPS2PV1,Murray Bridge-Onkaparinga Pipeline Pumping Station No 2,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,13.75
+MCINTYR1,MacIntyre Wind Farm,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,923.0
+MCKAY1,Bogong / Mackay Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,300.0
+MEADOWBK,Meadowbank Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,40.0
+MERCER01,Mt Mercer Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,131.2
+METZSF1,Metz Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,135.0
+MEWF1,Mount Emerald Wind Farm,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,180.0
+MIDDLSF1,Middlemount Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,30.0
+MINTARO,Mintaro Gas Turbine Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,90.0
+MLB01,Mortlake Battery Energy Storage System,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,440.0
+MLSP1,Mugga Lane Solar Park,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,12.0
+MLWF1,Mortons Lane Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,20.0
+MOKOSF1,Mokoan Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,58.0
+MOLNGSF1,Molong Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,36.0
+MOORABS1,Moorabool Wind Farm,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Non-Scheduled,2.0
+MOORAWF1,Moorabool Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,312.0
+MORANBAH,Moranbah Generation Project,QLD1,other,Coal Seam Methane,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,12.56
+MOREESF1,Moree Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,57.064
+MORTLK11,Mortlake Power Station,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,283.0
+MORTLK12,Mortlake Power Station,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,283.0
+MOUSF1,Moura Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,99.0
+MP1,Mt Piper Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,700.0
+MP2,Mt Piper Power Station,NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,700.0
+MPP_1,Millmerran Power Plant,QLD1,other,Black Coal,Steam Super Critical,Generating Unit,Scheduled,426.0
+MPP_2,Millmerran Power Plant,QLD1,other,Black Coal,Steam Super Critical,Generating Unit,Scheduled,426.0
+MREHA1,Melbourne Renewable Energy Hub Connection A1,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,215.8
+MREHA2,Melbourne Renewable Energy Hub Connection A2,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,215.8
+MREHA3,Melbourne Renewable Energy Hub Connection A3,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,215.4
+MRNBESS1,Mornington BESS,VIC1,battery,Grid,Battery,Bidirectional Unit,Scheduled,336.0
+MRTLSWF1,Mortlake South Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,157.5
+MSTUART1,Mt Stuart Power Station,QLD1,other,Kerosene,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,144.0
+MSTUART2,Mt Stuart Power Station,QLD1,other,Kerosene,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,144.0
+MSTUART3,Mt Stuart Power Station,QLD1,other,Kerosene,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,131.0
+MTGELWF1,Mt Gellibrand Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,138.0
+MTMILLAR,Mt Millar Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled*,70.0
+MUCRKSF1,Munna Creek Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,154.0
+MULWASF1,Mulwala Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,31.0
+MURRAY,Murray Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,1500.0
+MUSSELR1,Musselroe Wind Farm,TAS1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,168.0
+MUWAWF1,Murra Warra Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,231.8
+MUWAWF2,Murra Warra Wind Farm Stage 2,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,209.0
+MWPS1PV1,Morgan-Whyalla Pipeline Pumping Station No 1,SA1,solar,solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,5.5
+MWPS2PV1,Morgan-Whyalla Pipeline Pumping Station No 2,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,5.5
+MWPS3PV1,Morgan-Whyalla Pipeline Pumping Station No 3,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,7.5
+MWPS4PV1,Morgan-Whyalla Pipeline Pumping Station No 4,SA1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,5.5
+NASF1,Narromine Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,10.0
+NBHWF1,North Brown Hill Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,132.3
+NESBESS1,New England BESS,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,126.0
+NESBESS2,New England BESS,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,126.0
+NEVERSF1,Nevertire Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,132.0
+NEWENSF1,New England Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,235.0
+NEWENSF2,New England Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,235.0
+NPS,Newport Power Station,VIC1,other,Natural Gas,Steam Sub-Critical,Generating Unit,Scheduled,500.0
+NUMURSF1,Numurkah Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,112.0
+NYNGAN1,Nyngan Solar Plant,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,102.141
+OAKEY1,Oakey Power Station,QLD1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,141.0
+OAKEY1SF,Oakey 1 Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,30.0
+OAKEY2,Oakey Power Station,QLD1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,141.0
+OAKEY2SF,Oakey 2 Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,65.0
+OAKLAND1,Oaklands Hill Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,67.0
+OAKY2,Oaky Creek 2,QLD1,other,Waste Coal Mine Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,15.0
+OAKYCREK,Oaky Creek Power Station,QLD1,other,Coal Seam Methane,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,20.0
+ORABESS1,Orana BESS,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,439.0
+OSB-AG,Osborne Power Station,SA1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Scheduled,180.0
+PALOONA,Paloona Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,28.0
+PAREPS1,Port Augusta Renewable Energy Park,SA1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,99.0
+PAREPW1,Port Augusta Renewable Energy Park,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,210.0
+PARSF1,Parkes Solar Farm,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,55.0
+PIBESS1,Phillip Island BESS,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,7.0
+PINDARI,Pindari Hydro Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,6.7
+PLBESS1,Pine Lodge BESS,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,344.4
+POAT110,Poatina Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,100.0
+POAT220,Poatina Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,200.0
+POR01,Port Lincoln Gas Turbine,SA1,other,Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,50.0
+POR03,Port Lincoln Gas Turbine,SA1,other,Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,23.5
+PPCCGT,Pelican Point Power Station,SA1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Scheduled,478.0
+PTSTAN1,Pt Stanvac Power Station,SA1,other,Diesel,Compression Reciprocating Engine,Generating Unit,Scheduled,57.6
+PUMP1,Wivenhoe Power Station,QLD1,other,-,-,Load,Scheduled,240.0
+PUMP2,Wivenhoe Power Station,QLD1,other,-,-,Load,Scheduled,240.0
+QBYNB1,Queanbeyan BESS,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,10.0
+QPS1,Quarantine Power Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,29.0
+QPS2,Quarantine Power Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,24.0
+QPS3,Quarantine Power Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,24.0
+QPS4,Quarantine Power Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,24.0
+QPS5,Quarantine Power Station,SA1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,128.0
+QPSFB1,Quorn Park Solar Hybrid,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,96.0
+QPSFB2,Quorn Park Solar Hybrid,NSW1,battery,Solar,Battery and Inverter,Bidirectional Unit,Scheduled,27.0
+RACOMIL1,Racecourse Mill Power Station,QLD1,other,Bagasse,Steam Sub-Critical,Generating Unit,Non-Scheduled,48.0
+RANGEB1,Rangebank BESS,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,260.0
+REECE1,Reece Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,115.6
+REECE2,Reece Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,115.6
+REPULSE,Repulse Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,28.0
+RESS1,Riverina Energy Storage System 1,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,80.0
+RIVNB2,Riverena Energy Storage System 2,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,65.0
+ROMA_7,Roma Gas Turbine Station,QLD1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,40.0
+ROMA_8,Roma Gas Turbine Station,QLD1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,40.0
+ROWALLAN,Rowallan Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,10.5
+ROYALLA1,Royalla Solar Farm,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Non-Scheduled,20.0
+RPCG,Rocky Point Cogeneration Plant,QLD1,other,Bagasse,Steam Sub-Critical,Generating Unit,Non-Scheduled,30.0
+RRSF1,Ross River Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,128.0
+RUBICON,Rubicon Mountain Streams Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,13.0
+RUGBYR1,Rugby Run Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,83.0
+RYANCWF1,Ryan Corner Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,218.4
+RYEPARK1,Rye Park Renewable Energy,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,396.0
+SALTCRK1,Salt Creek Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,54.0
+SAPHWF1,Sapphire Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,270.0
+SEBSF1,Sebastopol Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,110.0
+SHEP1,Shepparton Wastewater Treatment Facility,VIC1,other,Sewerage / Waste Water,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,1.1
+SHGEN,Shoalhaven Power Station (Bendeela And Kangaroo Valley Power Station And Pumps),NSW1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,240.0
+SHOAL1,Shoalhaven Starches Cogeneration Plant,NSW1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,54.0
+SHPUMP,Shoalhaven Power Station (Bendeela And Kangaroo Valley Power Station And Pumps),NSW1,other,-,-,Load,Scheduled,240.0
+SITHE01,Smithfield Energy Facility,NSW1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Scheduled,125.0
+SKSF1,South Keswick Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Non-Scheduled,15.0
+SMCSF1,Sun Metals Solar Farm,QLD1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,143.0
+SMFBESS1,Summerfield BESS 1,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,153.65
+SMFBESS2,Summerfield BESS 2,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,153.65
+SMTHBES1,"Smithfield Battery Energy Storage System, Units 1 - 36",NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,69.4
+SNAPPER1,Snapper Point Power Station,SA1,other,Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,154.0
+SNB01,Supernode BESS,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,337.4
+SNB02,Supernode BESS,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,337.4
+SNOWNTH1,Snowtown Wind Farm Stage 2 North,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,144.0
+SNOWSTH1,Snowtown South Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,126.0
+SNOWTWN1,Snowtown Wind Farm Units 1 And 47,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,99.0
+SNOWYP,Tumut 3 Pumps,NSW1,other,Water,Hydro - Gravity,Load,Scheduled*,600.0
+SNUG1,Snuggery Power Station,SA1,other,Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,63.0
+SNUG2,Snuggery Power Station,SA1,other,Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,21.0
+SNUG3,Snuggery Power Station,SA1,other,Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,21.0
+SNUGNL1,Snuggery Power Station,SA1,other,Diesel,Open Cycle Gas turbines (OCGT),Generating Unit,Non-Scheduled,21.0
+SRSF1,Susan River Solar Farm,QLD1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,85.26
+STABESS1,Stanwell Battery Energy Storage System,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,317.0
+STAN-1,Stanwell Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,365.0
+STAN-2,Stanwell Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,365.0
+STAN-3,Stanwell Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,365.0
+STAN-4,Stanwell Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,365.0
+STAPYLTON1,Stapylton Renewable Energy Facility,QLD1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,3.0
+STARHLWF,Starfish Hill Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled*,34.5
+STOCKYD1,Stockyard Hill Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,531.0
+STUBSF1,Stubbo Solar Farm 1,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,255.0
+STUBSF2,Stubbo Solar Farm 2,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,248.0
+STWF1,Silverton Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,198.94
+SUNRSF1,SUNRAYSIA SF,NSW1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Semi-Scheduled,228.0
+SUNTPSF1,Suntop Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,175.0
+SWANBBF1,Swanbank BESS,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,331.2
+SWAN_E,Swanbank E Power Station,QLD1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Scheduled,385.0
+TABMILL2,Tableland Mill Unit 2,QLD1,other,Bagasse,Steam Super Critical,Generating Unit,Non-Scheduled,24.0
+TAHMOOR1,Tahmoor Waste Coal Mine Gas Power Station,NSW1,other,Waste Coal Mine Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,7.042
+TALWA1,Tallawarra Power Station,NSW1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Scheduled,440.0
+TALWB1,Tallawarra Power Station,NSW1,other,Natural Gas,Open Cycle Gas Turbine (OCGT),Generating Unit,Scheduled,320.0
+TARALGA1,Taralga Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,106.8
+TARBESS1,Tarong BESS,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,393.0
+TARONG#1,Tarong Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,350.0
+TARONG#2,Tarong Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,350.0
+TARONG#3,Tarong Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,350.0
+TARONG#4,Tarong Power Station,QLD1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,350.0
+TARRALEA,Tarraleah Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,90.0
+TATIARA1,Tataria Bordertown Plant,SA1,other,Diesel,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,0.5
+TATURA01,Tatura Biomass Generator,VIC1,other,Sewerage / Waste Water,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,1.1
+TB2B1,Tailem Bend 2 Hybrid Renewable Power Station,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,50.0
+TB2SF1,Tailem Bend 2 Hybrid Renewable Power Station,SA1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,105.0
+TB3B1,Tailem Bend 3 BESS,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,263.0
+TBSF1,Tailem Bend Solar Project 1,SA1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,108.0
+TEMPB1,Templers Battery Energy Storage System,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,138.0
+TGNSS1,Traralgon Network Support Station,VIC1,other,Natural Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,10.0
+THEDROP1,The Drop Power Station,NSW1,other,Water,Run of River,Generating Unit,Non-Scheduled,2.5
+TIB1,Torrens Island BESS,SA1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,250.0
+TIMWEST,Timboon West Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,7.2
+TITREE,Veolia Ti Tree Bio Reactor,QLD1,other,Landfill Methane / Landfill Gas,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,2.0
+TNPS1,Tarong North Power Station,QLD1,other,Black Coal,Steam Super Critical,Generating Unit,Scheduled,443.0
+TOORAWF,Toora Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,21.0
+TORRB2,Torrens Island Power Station,SA1,other,Natural Gas / Fuel Oil,Steam Sub-Critical,Generating Unit,Scheduled,200.0
+TORRB3,Torrens Island Power Station,SA1,other,Natural Gas / Fuel Oil,Steam Sub-Critical,Generating Unit,Scheduled,200.0
+TORRB4,Torrens Island Power Station,SA1,other,Natural Gas / Fuel Oil,Steam Sub-Critical,Generating Unit,Scheduled,200.0
+TOWER,Tower Power Plant,NSW1,other,Waste Coal Mine Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,41.2
+TREVALLN,Trevallyn Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,93.0
+TRGBESS1,Terang BESS,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,144.4
+TRIBUTE,Tribute Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,82.8
+TULLYSM1,Tully Sugar Mill,QLD1,other,Bagasse and Diesel,Steam Super Critical and Compression Reciprocating Engine,Generating Unit,Non-Scheduled,32.0
+TUMUT3,Tumut 3 Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,1500.0
+TUNGATIN,Tungatinah Power Station,TAS1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,125.0
+TVCC201,Tamar Valley Combined Cycle Power Station,TAS1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Scheduled,208.6
+TVPP104,Bell Bay Three Power Station,TAS1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,58.0
+ULPBESS1,Ulinda Park BESS,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,197.0
+UPPTUMUT,Tumut Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,616.0
+URANQ11,Uranquinty Power Station,NSW1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,166.0
+URANQ12,Uranquinty Power Station,NSW1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,166.0
+URANQ13,Uranquinty Power Station,NSW1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,166.0
+URANQ14,Uranquinty Power Station,NSW1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,166.0
+UWF1,Uungula Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,414.0
+VALDORA1,Valdora Solar Farm,QLD1,solar,Solar,Photovoltaic Flat panel,Generating Unit,Non-Scheduled,15.0
+VBB1,Victorian Big Battery,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,360.0
+VP5,"Vales Point ""B"" Power Station",NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,660.0
+VP6,"Vales Point ""B"" Power Station",NSW1,other,Black Coal,Steam Sub-Critical,Generating Unit,Scheduled,660.0
+VPGS1,Valley Power Peaking Facility,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,50.0
+VPGS2,Valley Power Peaking Facility,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,50.0
+VPGS3,Valley Power Peaking Facility,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,50.0
+VPGS4,Valley Power Peaking Facility,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,50.0
+VPGS5,Valley Power Peaking Facility,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,50.0
+VPGS6,Valley Power Peaking Facility,VIC1,other,Natural Gas,Open Cycle Gas turbines (OCGT),Generating Unit,Scheduled,50.0
+W/HOE#1,Wivenhoe Power Station,QLD1,other,Water,Pump Storage,Generating Unit,Scheduled,285.0
+W/HOE#2,Wivenhoe Power Station,QLD1,other,Water,Pump Storage,Generating Unit,Scheduled,285.0
+WAGGNSF1,Wagga North Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,55.0
+WALGRV1,Wallgrove BESS 1,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,50.0
+WAMBOWF1,Wambo Wind Farm 1,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,252.0
+WAMBOWF2,Wambo Wind Farm 2,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,254.0
+WANDB1,Wandoan Battery Energy Storage System (BESS),QLD1,battery,Grid,Battery,Bidirectional Unit,Scheduled,123.0
+WANDSF1,Wandoan Solar Farm,QLD1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,159.0
+WANDSF2,Wandoan Solar Farm,QLD1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,310.0
+WARWSF1,Warwick Solar Farm 1,QLD1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,39.0
+WARWSF2,Warwick Solar Farm 2,QLD1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,39.0
+WATERLWF,Waterloo Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,130.8
+WAUBRAWF,Waubra Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,192.0
+WDBESS1,Western Downs Battery Energy Storage System,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,272.48
+WDBESS2,Western Downs Battery Energy Storage System (BESS),QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,269.8
+WDGPH1,Western Downs GPH,QLD1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,501.0
+WDLNGN01,Woodlawn Bioreactor Energy Generation Station,NSW1,other,Landfill Methane / Landfill Gas,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,7.0
+WELLSF1,Wellington Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,216.0
+WELNSF1,Wellington North Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,436.0
+WEMENSF1,Wemen Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,97.5
+WESTILL1,West Illawarra Leagues Club Plant,NSW1,other,Diesel,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,1.0
+WGWF1,Willogoleche Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,122.0
+WHILL1,Windy Hill Wind Farm,QLD1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,12.0
+WHIT1,Whitwood Road Renewable Energy Facility,QLD1,other,Landfill Methane / Landfill Gas,Compression Reciprocating Engine,Generating Unit,Non-Scheduled,1.0
+WHITSF1,Whitsunday Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,57.5
+WILGAPK,Wilga Park Power Station,NSW1,other,Coal Seam Methane,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,10.0
+WILGB01,Wilga Park B,NSW1,other,Coal Seam Methane,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,12.0
+WILLBES1,Williamsdale BESS,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,262.0
+WILLHOV1,William Hovell Power Station,VIC1,other,Water,Run of River,Generating Unit,Non-Scheduled,1.5
+WINGF1_1,Wingfield 1 Landfill Gas Power Station,SA1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,4.12
+WINGF2_1,Wingfield 2 Landfill Gas Power Station,SA1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,4.12
+WINTSF1,Winton Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,107.0
+WKIEWA1,West Kiewa Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Scheduled,80.0
+WLWLSF1,Walla Walla Solar Farm 1,NSW1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,201.6
+WLWLSF2,Walla Walla Solar Farm 2,NSW1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,201.6
+WNSF1,Wangaratta Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Non-Scheduled,26.4
+WOLARSF1,Wollar Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,324.0
+WOLLERT1,Wollert Renewable Energy Facility,VIC1,other,Landfill Methane / Landfill Gas,Spark Ignition Reciprocating Engine,Generating Unit,Non-Scheduled,7.0
+WONWP,Wonthaggi Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,12.0
+WOODLWN1,Woodlawn Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,48.3
+WOOLES1,Woolooga BESS,QLD1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,280.0
+WOOLGSF1,Woolooga Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,222.5
+WOOLNTH1,Woolnorth Studland Bay / Bluff Point Wind Farm,TAS1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,140.0
+WOORB1,Wooreen Battery Energy Storage System,VIC1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,491.0
+WPWF,Wattle Point Wind Farm,SA1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled*,90.75
+WRSF1,White Rock Solar Farm,NSW1,solar,Solar,Photovoltaic Flat Panel,Generating Unit,Semi-Scheduled,22.0
+WRWF1,White Rock Wind Farm,NSW1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,175.0
+WSTWYSF1,West Wyalong Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat Panel,Generating Unit,Semi-Scheduled,105.0
+WTAHB1,Waratah Super Battery,NSW1,battery,Grid,Battery and Inverter,Bidirectional Unit,Scheduled,1095.84
+WUNUSF1,Wunghnu Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,93.5
+WYANGALA,Wyangala A Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,20.0
+WYANGALB,Wyangala B Power Station,NSW1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,4.0
+WYASF1,Wyalong Solar Farm,NSW1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,62.0
+YABULU,Townsville Gas Turbine,QLD1,other,Natural Gas,OCGT,Generating Unit,Scheduled,160.0
+YABULU2,Townsville Gas Turbine,QLD1,other,Natural Gas,OCGT,Generating Unit,Scheduled,82.0
+YAMBUKWF,Yambuk Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,30.0
+YARANSF1,Yarranlea Solar Farm,QLD1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,121.0
+YARWUN_1,Yarwun Power Station,QLD1,other,Natural Gas,Combined Cycle Gas Turbine (CCGT),Generating Unit,Non-Scheduled**,154.0
+YATSF1,Yatpool Solar Farm,VIC1,solar,Solar,Photovoltaic Tracking Flat panel,Generating Unit,Semi-Scheduled,94.0
+YAWWF1,Yawong Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,7.2
+YENDWF1,Yendon Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Semi-Scheduled,144.4
+YSWF1,Yaloak South Wind Farm,VIC1,wind,Wind,Wind - Onshore,Generating Unit,Non-Scheduled,28.7
+YWNGAHYD,Yarrawonga Hydro Power Station,VIC1,other,Water,Hydro - Gravity,Generating Unit,Non-Scheduled,9.0
+YWPS1,Yallourn 'W' Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,360.0
+YWPS2,Yallourn 'W' Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,360.0
+YWPS3,Yallourn 'W' Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,380.0
+YWPS4,Yallourn 'W' Power Station,VIC1,other,Brown Coal,Steam Sub-Critical,Generating Unit,Scheduled,380.0

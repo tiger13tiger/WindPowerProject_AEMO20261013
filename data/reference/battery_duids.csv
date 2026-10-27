@@ -1,0 +1,72 @@
+duid,station_id,station_name,region,capacity_mw,storage_mwh,dispatch_type,schedule_type,in_scada
+ADPBA1,adelaide-desalination-plant,Adelaide Desalination Plant,SA1,7.76,,Bidirectional Unit,Scheduled,true
+BALB1,ballarat-battery-energy-storage-system,Ballarat Battery Energy Storage System,VIC1,30.0,,Bidirectional Unit,Scheduled,true
+BBATTERY1,bouldercombe-battery-project,Bouldercombe Battery Project,QLD1,67.0,,Bidirectional Unit,Scheduled,true
+BHB1,broken-hill-battery-energy-storage-system,Broken Hill Battery Energy Storage System,NSW1,66.0,,Bidirectional Unit,Scheduled,true
+BLYTHB1,blyth-battery-energy-storage-system,Blyth Battery Energy Storage System,SA1,281.0,,Bidirectional Unit,Scheduled,true
+BOWWBA1,bolivar-waste-water-treatment-plant,Bolivar Waste Water Treatment Plant,SA1,3.0,,Bidirectional Unit,Scheduled,true
+BRDDBES1,broadsound-energy-park,Broadsound Energy Park,QLD1,240.0,,Bidirectional Unit,Scheduled,true
+BRNDBES1,brendale-bess,Brendale BESS,QLD1,215.0,,Bidirectional Unit,Scheduled,true
+BULBES1,bulgana-green-power-hub,Bulgana Green Power Hub,VIC1,24.0,,Bidirectional Unit,Scheduled,true
+BUNGAMB1,bungama-battery-energy-storage-system,Bungama Battery Energy Storage System,SA1,217.0,,Bidirectional Unit,Scheduled,true
+CAPBES1,capital-battery,Capital Battery,NSW1,125.0,,Bidirectional Unit,Scheduled,true
+CBWWBA1,christies-beach-wastewater-treatment-plant,Christies Beach Wastewater Treatment Plant,SA1,2.16,,Bidirectional Unit,Scheduled,true
+CGBESS01,clements-gap-bess,Clements Gap BESS,SA1,90.5,,Bidirectional Unit,Scheduled,true
+CHBESS1,chinchilla-bess-units-1-80,"Chinchilla BESS, Units 1-80",QLD1,134.0,,Bidirectional Unit,Scheduled,true
+DALNTH1,dalrymple-north-bess,Dalrymple North BESS,SA1,30.0,,Bidirectional Unit,Scheduled,true
+DPNTB1,darlington-point-energy-storage-system,Darlington Point Energy Storage System,NSW1,25.0,,Bidirectional Unit,Scheduled,true
+ERB01,eraring-battery-energy-storage-system,Eraring Battery Energy Storage System,NSW1,614.6,,Bidirectional Unit,Scheduled,true
+ERB02,eraring-battery-energy-storage-system-2,Eraring Battery Energy Storage System 2,NSW1,351.0,,Bidirectional Unit,Scheduled,true
+GANNB1,gannawarra-energy-storage-system,Gannawarra Energy Storage System,VIC1,30.0,,Bidirectional Unit,Scheduled,true
+GREENB1,greenbank-bess,Greenbank BESS,QLD1,259.2,,Bidirectional Unit,Scheduled,true
+HBESS1,hazelwood-battery-energy-storage-system,Hazelwood Battery Energy Storage System,VIC1,200.0,,Bidirectional Unit,Scheduled,true
+HPR1,hornsdale-power-reserve,Hornsdale Power Reserve,SA1,150.0,,Bidirectional Unit,Scheduled,true
+HVWWBA1,happy-valley-water-treatment-plant,Happy Valley Water Treatment Plant,SA1,5.0,,Bidirectional Unit,Scheduled,true
+KEPBG1,kennedy-energy-park-battery,Kennedy Energy Park Battery,QLD1,2.0,,Generating Unit,Non-Scheduled,true
+KEPBL1,kennedy-energy-park-battery,Kennedy Energy Park Battery,QLD1,2.0,,Load,Non-Scheduled,false
+KESSB1,koorangie-energy-storage-system,Koorangie Energy Storage System,VIC1,185.0,,Bidirectional Unit,Scheduled,true
+LBB1,lake-bonney-bess1,Lake Bonney BESS1,SA1,25.0,,Bidirectional Unit,Scheduled,true
+LDBESS1,liddell-battery-energy-storage-system,Liddell Battery Energy Storage System,NSW1,755.08,,Bidirectional Unit,Scheduled,true
+LGAPBS1,lincoln-gap-wind-farm-battery,Lincoln Gap Wind Farm Battery,SA1,10.8,,Bidirectional Unit,Scheduled,true
+LIMBESS1,limondale-battery,Limondale Battery,NSW1,141.0,,Bidirectional Unit,Scheduled,true
+LVES1,latrobe-valley-bess,Latrobe Valley BESS,VIC1,140.0,,Bidirectional Unit,Scheduled,true
+MANNUMB1,mannum-battery-energy-storage-system,Mannum Battery Energy Storage System,SA1,131.7,,Bidirectional Unit,Scheduled,true
+MLB01,mortlake-battery-energy-storage-system,Mortlake Battery Energy Storage System,NSW1,440.0,,Bidirectional Unit,Scheduled,true
+MOORABS1,moorabool-wind-farm,Moorabool Wind Farm,VIC1,2.0,,Bidirectional Unit,Non-Scheduled,false
+MREHA1,melbourne-renewable-energy-hub-connection-a1,Melbourne Renewable Energy Hub Connection A1,VIC1,215.8,,Bidirectional Unit,Scheduled,true
+MREHA2,melbourne-renewable-energy-hub-connection-a2,Melbourne Renewable Energy Hub Connection A2,VIC1,215.8,,Bidirectional Unit,Scheduled,true
+MREHA3,melbourne-renewable-energy-hub-connection-a3,Melbourne Renewable Energy Hub Connection A3,VIC1,215.4,,Bidirectional Unit,Scheduled,true
+MRNBESS1,mornington-bess,Mornington BESS,VIC1,336.0,,Bidirectional Unit,Scheduled,true
+NESBESS1,new-england-bess,New England BESS,NSW1,126.0,,Bidirectional Unit,Scheduled,true
+NESBESS2,new-england-bess,New England BESS,NSW1,126.0,,Bidirectional Unit,Scheduled,true
+ORABESS1,orana-bess,Orana BESS,NSW1,439.0,,Bidirectional Unit,Scheduled,true
+PIBESS1,phillip-island-bess,Phillip Island BESS,VIC1,7.0,,Bidirectional Unit,Scheduled,true
+PLBESS1,pine-lodge-bess,Pine Lodge BESS,VIC1,344.4,,Bidirectional Unit,Scheduled,true
+QBYNB1,queanbeyan-bess,Queanbeyan BESS,NSW1,10.0,,Bidirectional Unit,Scheduled,true
+QPSFB2,quorn-park-solar-hybrid,Quorn Park Solar Hybrid,NSW1,27.0,,Bidirectional Unit,Scheduled,true
+RANGEB1,rangebank-bess,Rangebank BESS,VIC1,260.0,,Bidirectional Unit,Scheduled,true
+RESS1,riverina-energy-storage-system-1,Riverina Energy Storage System 1,NSW1,80.0,,Bidirectional Unit,Scheduled,true
+RIVNB2,riverena-energy-storage-system-2,Riverena Energy Storage System 2,NSW1,65.0,,Bidirectional Unit,Scheduled,true
+SMFBESS1,summerfield-bess-1,Summerfield BESS 1,SA1,153.65,,Bidirectional Unit,Scheduled,true
+SMFBESS2,summerfield-bess-2,Summerfield BESS 2,SA1,153.65,,Bidirectional Unit,Scheduled,true
+SMTHBES1,smithfield-battery-energy-storage-system-units-1-36,"Smithfield Battery Energy Storage System, Units 1 - 36",NSW1,69.4,,Bidirectional Unit,Scheduled,true
+SNB01,supernode-bess,Supernode BESS,QLD1,337.4,,Bidirectional Unit,Scheduled,true
+SNB02,supernode-bess,Supernode BESS,QLD1,337.4,,Bidirectional Unit,Scheduled,true
+STABESS1,stanwell-battery-energy-storage-system,Stanwell Battery Energy Storage System,QLD1,317.0,,Bidirectional Unit,Scheduled,true
+SWANBBF1,swanbank-bess,Swanbank BESS,QLD1,331.2,,Bidirectional Unit,Scheduled,true
+TARBESS1,tarong-bess,Tarong BESS,QLD1,393.0,,Bidirectional Unit,Scheduled,true
+TB2B1,tailem-bend-2-hybrid-renewable-power-station,Tailem Bend 2 Hybrid Renewable Power Station,SA1,50.0,,Bidirectional Unit,Scheduled,true
+TB3B1,tailem-bend-3-bess,Tailem Bend 3 BESS,SA1,263.0,,Bidirectional Unit,Scheduled,true
+TEMPB1,templers-battery-energy-storage-system,Templers Battery Energy Storage System,SA1,138.0,,Bidirectional Unit,Scheduled,true
+TIB1,torrens-island-bess,Torrens Island BESS,SA1,250.0,,Bidirectional Unit,Scheduled,true
+TRGBESS1,terang-bess,Terang BESS,VIC1,144.4,,Bidirectional Unit,Scheduled,true
+ULPBESS1,ulinda-park-bess,Ulinda Park BESS,QLD1,197.0,,Bidirectional Unit,Scheduled,true
+VBB1,victorian-big-battery,Victorian Big Battery,VIC1,360.0,,Bidirectional Unit,Scheduled,true
+WALGRV1,wallgrove-bess-1,Wallgrove BESS 1,NSW1,50.0,,Bidirectional Unit,Scheduled,true
+WANDB1,wandoan-battery-energy-storage-system-bess,Wandoan Battery Energy Storage System (BESS),QLD1,123.0,,Bidirectional Unit,Scheduled,true
+WDBESS1,western-downs-battery-energy-storage-system,Western Downs Battery Energy Storage System,QLD1,272.48,,Bidirectional Unit,Scheduled,true
+WDBESS2,western-downs-battery-energy-storage-system-bess,Western Downs Battery Energy Storage System (BESS),QLD1,269.8,,Bidirectional Unit,Scheduled,true
+WILLBES1,williamsdale-bess,Williamsdale BESS,NSW1,262.0,,Bidirectional Unit,Scheduled,true
+WOOLES1,woolooga-bess,Woolooga BESS,QLD1,280.0,,Bidirectional Unit,Scheduled,true
+WOORB1,wooreen-battery-energy-storage-system,Wooreen Battery Energy Storage System,VIC1,491.0,,Bidirectional Unit,Scheduled,true
+WTAHB1,waratah-super-battery,Waratah Super Battery,NSW1,1095.84,,Bidirectional Unit,Scheduled,true
