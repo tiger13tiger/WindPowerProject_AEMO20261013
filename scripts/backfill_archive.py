@@ -272,9 +272,14 @@ def reopen_sealed_days(start: date, end: date, silver_dir: Path = SILVER_DIR) ->
             if not start <= day <= end:
                 continue
             literal = str(path).replace("'", "''")
-            incomplete = duckdb.sql(
-                f"SELECT count(*) FILTER (WHERE NOT is_complete) > 0 FROM read_parquet('{literal}')"
-            ).fetchone()
+            con = duckdb.connect()
+            try:
+                incomplete = con.execute(
+                    "SELECT count(*) FILTER (WHERE NOT is_complete) > 0 "
+                    f"FROM read_parquet('{literal}')"
+                ).fetchone()
+            finally:
+                con.close()
             if incomplete and incomplete[0]:
                 path.unlink()
                 removed.append(path)
