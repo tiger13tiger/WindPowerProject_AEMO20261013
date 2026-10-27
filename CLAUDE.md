@@ -82,6 +82,11 @@ Rules that follow from this:
   `is_complete` on every row. Judge this from the data's own latest interval,
   never the wall clock — a clock seals days during an ingestion outage, writing
   gaps that were still fillable.
+- The archive backfill is the one exception. `Archive/` holds a rolling year
+  of what `Current/` dropped, so a seal's premise — the missing files are gone
+  — stops being true once the backfill has supplied them. `backfill_archive.py`
+  removes a silver day only if it says of itself `is_complete = false`, and the
+  next transform rewrites it whole. No other code removes a silver file.
 - Every write is idempotent and keyed off a watermark: each source keeps its
   own at `data/bronze/<source>/_ingested.txt`, one file name per line, appended
   only after a successful Parquet write. Re-running a job must not duplicate
@@ -136,6 +141,10 @@ Rules that follow from this:
 - Quality gates gold, not silver. The check runs with `continue-on-error` so
   silver is still committed, gold is skipped on a hard failure, and a final step
   ends the run red so the failure cannot pass unnoticed.
+- `backfill.yml` is manual, one month per run, and holds the same
+  `ingest-bronze` concurrency group as the hourly ingest, because both append
+  to the bronze watermarks. It writes bronze in the live layout and nothing
+  downstream: the next hourly transform builds the silver and gold.
 - Concurrency is declared at workflow level only. A job asking for the same
   group as its own workflow queues behind its own run until it times out.
 - Data commits carry `[skip ci]`, which suppresses every workflow for that push.

@@ -1,0 +1,95 @@
+name: Backfill from AEMO archive
+
+# Manual only. Reads AEMO's rolling one-year archive of daily bundles and writes
+# the hours bronze is missing, in exactly the layout the live ingest writes, so
+# silver, gold and the ML features pick them up on the next hourly run.
+#
+# One month per run keeps a run well inside the time limit and makes each
+# commit a reviewable unit. The archive is rolling: run the oldest month first,
+# because that is the one about to disappear.
+
+on:
+  workflow_dispatch:
+    inputs:
+      month:
+        description: "Month to backfill, YYYY-MM"
+        required: true
+      report:
+        description: "Which report"
+        type: choice
+        default: all
+        options: [all, scada, dispatchis, p5min]
+      dry_run:
+        description: "Only list what would be written"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  # The same group as the hourly ingest: both append to the bronze watermarks,
+  # so they must never run at once. Never cancel: a run may be mid-write.
+  group: ingest-bronze
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    # A month is ~30 daily bundles per report; P5MIN's are the largest at about
+    # 70 MB a day. Measured runs belong in the PR that changes this.
+    timeout-minutes: 180
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install --disable-pip-version-check .
+
+      - name: Backfill
+        run: |
+          python scripts/backfill_archive.py --month "${MONTH}" --report "${REPORT}" \
+            ${DRY_RUN:+--dry-run}
+        env:
+          MONTH: ${{ inputs.month }}
+          REPORT: ${{ inputs.report }}
+          DRY_RUN: ${{ inputs.dry_run && 'yes' || '' }}
+
+      - name: Repo size after backfill
+        if: ${{ !inputs.dry_run }}
+        run: python scripts/repo_size.py || true
+
+      - name: Commit backfilled bronze
+        if: ${{ !inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Silver is staged too: the backfill removes sealed-incomplete days it
+          # has just made completable, so the next transform rebuilds them.
+          git add -A data/bronze data/silver
+          if git diff --cached --quiet; then
+            echo "Nothing new for ${MONTH}."
+            exit 0
+          fi
+          files=$(git diff --cached --name-only --diff-filter=A -- data/bronze | grep -c '\.parquet$' || true)
+          git commit -m "data: backfill ${MONTH} from AEMO archive (${files} bronze files) [skip ci]"
+
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push failed (attempt ${attempt}); rebasing onto origin."
+            git pull --rebase --autostash
+            sleep $((attempt * 5))
+          done
+          echo "Could not push after 3 attempts." >&2
+          exit 1
+        env:
+          MONTH: ${{ inputs.month }}
