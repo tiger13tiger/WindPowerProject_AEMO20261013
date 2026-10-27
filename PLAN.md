@@ -362,7 +362,37 @@ file by `scripts/inspect_report.py`, which the "Inspect AEMO report" workflow
 runs on demand and which writes nothing.
 25. Extend the registry from wind-only to a typed unit list, so batteries are
     classified rather than discarded, and solar and other fuels can be rolled
-    up to regional totals.
+    up to regional totals. ✓ `refresh_reference.py` now also writes
+    `units.csv` (every DUID → wind, battery, solar or other) and
+    `battery_duids.csv` (with `station_id`, which pairs an older battery's
+    generator and load DUIDs). `wind_duids.csv` is unchanged. Battery is
+    decided before wind because AEMO files Hornsdale Power Reserve under fuel
+    "Wind", and every bidirectional unit in the NEM is a battery. `storage_mwh`
+    is read under five plausible spellings, none yet confirmed on the live
+    file; a refresh that matches none says so.
+25a. Archive backfill, `scripts/backfill_archive.py` + `backfill.yml`. ✓
+    `Archive/` holds a rolling year of daily bundles, each a zip of the same
+    five-minute zips the live ingest reads, so the backfill feeds them through
+    the live parser and writer. A bundle covers a market day (04:05 to 04:00),
+    which splits hour 04 across two bundles; the bundles either side of the
+    range are read so every hour is written whole. Proved on the real archive
+    before merge: one day gave 288 files per bundle and exactly 288 x 5 price
+    rows. Scope decided for now: the latest three months (Aug to mid-Oct 2026),
+    about 85 MB, with the rest of the year a later decision. The archive held
+    2025-10-16 onward on 2026-10-27; the first half of October 2025 is gone.
+    P5MIN is archived too and is backfilled; PREDISPATCH is not, because its
+    `Current/` keeps fifteen days and its bundles are the largest.
+25b. Baselines kept current, with an AEMO comparator at both horizons. ✓
+    `baselines.py` runs in the hourly transform, so `baseline_metrics.json`
+    can no longer go stale (the committed one had been generated before the
+    P5MIN coverage fix in the same PR). `predispatch_baseline.sql` is the
+    120-minute comparator, joined on publication time and carrying a run's
+    last period over the 1-7 intervals its two-hour reach falls short. Every
+    row also reports `mae_trim99`: on 15 Oct 2026 P5MIN forecast QLD1 near
+    $23,200 for an hour that settled near $90, and nine rows carried 85% of
+    QLD1's P5MIN MAE. Trimmed, AEMO beats persistence at both horizons on
+    the data so far (60 min 9.34 vs 9.83; 120 min 13.42 vs 13.81); untrimmed,
+    it loses. Both are reported because both are true.
 26. New bronze source: `P5MIN`, AEMO's own five-minute forecast, as the
     baseline to beat and as a feature.
 27. `scripts/build_features.py` + `sql/ml/features.sql`: one row per region per
