@@ -96,7 +96,37 @@ OPTIONAL_COLUMN_HINTS: Final = {
         "scheduled status",
         "classification",
     ),
+    # A battery's energy, as against its power. Equally unverified: a refresh
+    # that finds none of these leaves storage_mwh blank and logs the headers.
+    "storage_mwh": (
+        "max storage capacity (mwh)",
+        "storage capacity (mwh)",
+        "max storage (mwh)",
+        "storage (mwh)",
+        "nameplate storage capacity (mwh)",
+    ),
 }
+
+# Every unit gets exactly one of these. Wind and battery are the subjects of
+# study; solar and other exist only to be summed into regional features.
+FUEL_GROUPS: Final = ("wind", "battery", "solar", "other")
+BATTERY_RE: Final = re.compile(r"batter|bess|storage", re.IGNORECASE)
+HYDRO_RE: Final = re.compile(r"hydro|pump|water", re.IGNORECASE)
+SOLAR_RE: Final = re.compile(r"solar|photovoltaic|\bpv\b", re.IGNORECASE)
+BIDIRECTIONAL_RE: Final = re.compile(r"bi-?directional", re.IGNORECASE)
+
+UNITS_CSV: Final = OUT_CSV.with_name("units.csv")
+BATTERY_CSV: Final = OUT_CSV.with_name("battery_duids.csv")
+UNITS_HEADER: Final = (
+    "duid", "station_name", "region", "fuel_group", "fuel_type", "technology_type",
+    "dispatch_type", "schedule_type", "capacity_mw",
+)
+BATTERY_HEADER: Final = (
+    # station_id ties an older battery's separate generator and load DUIDs
+    # together, so silver can net them into one signed output per station.
+    "duid", "station_id", "station_name", "region", "capacity_mw", "storage_mwh",
+    "dispatch_type", "schedule_type", "in_scada",
+)
 
 HEADER: Final = (
     "duid", "station_name", "region", "fuel_type", "capacity_mw",
@@ -206,11 +236,110 @@ def map_columns(columns: list[str]) -> dict[str, str]:
     absent = [field for field in OPTIONAL_COLUMN_HINTS if field not in mapping]
     if absent:
         LOG.warning(
-            "optional columns not found: %s. Battery and storage units can only be "
-            "excluded by fuel source, which reads 'Wind' for some of them.",
+            "optional columns not found: %s (left blank). Without technology_type and "
+            "dispatch_type, batteries filed under fuel 'Wind' cannot be told apart.",
             absent,
         )
     return mapping
+
+
+def load_body(payload: bytes) -> tuple[object, dict[str, str]]:
+    """Return the generator table below its header row, and the column mapping."""
+    sheets = read_sheets(payload)
+    sheet_name = pick_sheet(sheets)
+    frame = sheets[sheet_name]
+    LOG.info("using sheet %r (%d rows)", sheet_name, len(frame))
+
+    header_row = find_header_row(frame)
+    columns = [str(value).strip() for value in frame.iloc[header_row].tolist()]
+    mapping = map_columns(columns)
+    LOG.info("header row %d; using columns %s", header_row, mapping)
+
+    body = frame.iloc[header_row + 1 :].copy()
+    body.columns = columns
+    return body, mapping
+
+
+def fuel_group(fuel: str, technology: str, dispatch: str) -> str:
+    """Classify a unit as wind, battery, solar or other.
+
+    Battery is decided first, because AEMO files some batteries under fuel
+    "Wind" (Hornsdale Power Reserve) and every bidirectional unit in the NEM is
+    a battery. Pumped hydro also stores energy but is hydro, so it stays other.
+    """
+    text = " ".join((fuel, technology, dispatch))
+    if HYDRO_RE.search(text):
+        return "other"
+    if BATTERY_RE.search(text) or BIDIRECTIONAL_RE.search(dispatch):
+        return "battery"
+    if WIND_RE.search(fuel) or WIND_RE.search(technology):
+        return "wind"
+    if SOLAR_RE.search(text):
+        return "solar"
+    return "other"
+
+
+def station_id(station_name: str) -> str:
+    """A stable key for a station's name, so its generator and load DUIDs pair up."""
+    return re.sub(r"[^a-z0-9]+", "-", station_name.lower()).strip("-")
+
+
+def extract_units(payload: bytes) -> list[dict[str, object]]:
+    """Return one row per DUID with a NEM region, classified into a fuel group."""
+    body, mapping = load_body(payload)
+
+    def cell(row: object, field: str) -> str:
+        return " ".join(str(row[mapping[field]]).split()) if field in mapping else ""
+
+    units: dict[str, dict[str, object]] = {}
+    for _, row in body.iterrows():
+        duid = str(row[mapping["duid"]]).strip().upper()
+        if not duid or duid in {"NAN", "-", "DUID"}:
+            continue
+        region = normalise_region(row[mapping["region"]])
+        if region is None:
+            continue
+        fuel, technology = cell(row, "fuel_type"), cell(row, "technology_type")
+        dispatch = cell(row, "dispatch_type")
+        storage = normalise_capacity(row[mapping["storage_mwh"]]) if "storage_mwh" in mapping \
+            else None
+        units[duid] = {
+            "duid": duid,
+            "station_name": cell(row, "station_name"),
+            "region": region,
+            "fuel_group": fuel_group(fuel, technology, dispatch),
+            "fuel_type": fuel,
+            "technology_type": technology,
+            "dispatch_type": dispatch,
+            "schedule_type": cell(row, "schedule_type"),
+            "capacity_mw": normalise_capacity(row[mapping["capacity_mw"]]),
+            "storage_mwh": storage,
+        }
+    if not units:
+        raise RegistryError("no units with a NEM region found")
+
+    counts = {group: sum(u["fuel_group"] == group for u in units.values()) for group in FUEL_GROUPS}
+    LOG.info("classified %d units: %s", len(units), counts)
+    return [units[duid] for duid in sorted(units)]
+
+
+def battery_rows(units: list[dict[str, object]]) -> list[dict[str, object]]:
+    """The battery subset, shaped for battery_duids.csv."""
+    return [
+        {
+            "duid": unit["duid"],
+            "station_id": station_id(str(unit["station_name"])),
+            "station_name": unit["station_name"],
+            "region": unit["region"],
+            "capacity_mw": unit["capacity_mw"],
+            "storage_mwh": unit["storage_mwh"],
+            "dispatch_type": unit["dispatch_type"],
+            "schedule_type": unit["schedule_type"],
+            "in_scada": None,
+        }
+        for unit in units
+        if unit["fuel_group"] == "battery"
+    ]
 
 
 def normalise_region(value: str) -> str | None:
@@ -256,18 +385,7 @@ def is_generation(fuel: str, technology: str, dispatch: str) -> bool:
 
 def extract_wind(payload: bytes) -> WindRows:
     """Return one row per wind DUID in the registration list."""
-    sheets = read_sheets(payload)
-    sheet_name = pick_sheet(sheets)
-    frame = sheets[sheet_name]
-    LOG.info("using sheet %r (%d rows)", sheet_name, len(frame))
-
-    header_row = find_header_row(frame)
-    columns = [str(value).strip() for value in frame.iloc[header_row].tolist()]
-    mapping = map_columns(columns)
-    LOG.info("header row %d; using columns %s", header_row, mapping)
-
-    body = frame.iloc[header_row + 1 :].copy()
-    body.columns = columns
+    body, mapping = load_body(payload)
 
     def cell(row: object, field: str) -> str:
         """Read an optional column, or empty string when it is not present."""
@@ -384,13 +502,15 @@ def annotate_in_scada(rows: list[dict[str, object]], duids: set[str] | None) -> 
         row["in_scada"] = None if duids is None else row["duid"] in duids
 
 
-def write_csv(rows: list[dict[str, object]], destination: Path) -> None:
-    """Write the registry, sorted by DUID, with a sidecar provenance file."""
+def write_csv(
+    rows: list[dict[str, object]], destination: Path, header: tuple[str, ...] = HEADER
+) -> None:
+    """Write a registry file, in the given column order."""
     import csv
 
     destination.parent.mkdir(parents=True, exist_ok=True)
     with destination.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=HEADER)
+        writer = csv.DictWriter(handle, fieldnames=header, extrasaction="ignore")
         writer.writeheader()
         for row in rows:
             # Lowercase booleans, and blank rather than "None" for unknown, so
@@ -477,9 +597,27 @@ def main(argv: list[str] | None = None) -> int:
         LOG.error("run with --inspect to dump the workbook's sheets and header rows")
         return 1
 
-    annotate_in_scada(rows, scada_duids(args.bronze_dir))
+    in_bronze = scada_duids(args.bronze_dir)
+    annotate_in_scada(rows, in_bronze)
     write_csv(rows, args.out)
     write_meta(rows, payload, args.url, args.out.with_suffix(".meta.json"), excluded)
+
+    # The typed unit list: batteries for study, solar and other for regional totals.
+    try:
+        units = extract_units(payload)
+    except RegistryError as exc:
+        LOG.error("%s", exc)
+        return 1
+    batteries = battery_rows(units)
+    annotate_in_scada(batteries, in_bronze)
+    write_csv(units, args.out.with_name(UNITS_CSV.name), UNITS_HEADER)
+    write_csv(batteries, args.out.with_name(BATTERY_CSV.name), BATTERY_HEADER)
+    LOG.info("wrote %s (%d units) and %s (%d battery DUIDs, %.1f MW)",
+             UNITS_CSV.name, len(units), BATTERY_CSV.name, len(batteries),
+             sum(float(b["capacity_mw"]) for b in batteries if b["capacity_mw"]))
+    if batteries and not any(b["storage_mwh"] for b in batteries):
+        LOG.warning("no battery has storage_mwh: the MWh column was not found under any "
+                    "known spelling, so cycle counts will be unavailable")
 
     capacity = sum(float(row["capacity_mw"]) for row in rows if row["capacity_mw"])
     missing = sum(1 for row in rows if not row["capacity_mw"])
