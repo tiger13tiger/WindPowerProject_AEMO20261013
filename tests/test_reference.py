@@ -14,9 +14,14 @@ openpyxl = pytest.importorskip("openpyxl", reason="reference extras not installe
 pytest.importorskip("pandas", reason="reference extras not installed")
 
 from refresh_reference import (  # noqa: E402
+    BATTERY_HEADER,
+    UNITS_HEADER,
     RegistryError,
     annotate_in_scada,
+    battery_rows,
+    extract_units,
     extract_wind,
+    fuel_group,
     is_generation,
     normalise_capacity,
     normalise_region,
@@ -352,3 +357,86 @@ def test_meta_counts_scada_coverage(tmp_path):
 
     assert meta["in_scada"] == 2
     assert meta["not_in_scada"] == 2
+
+
+# --- Typed unit list and battery registry -----------------------------------
+
+PAIR_ROWS = [
+    # An older battery registered as two DUIDs: one to discharge, one to charge.
+    ["Iota", "Lake Battery", "QLD1", "Generator", "Scheduled",
+     "Battery storage", "Battery Storage", "LAKEG1", 50.0],
+    ["Iota", "Lake Battery", "QLD1", "Load", "Scheduled",
+     "Battery storage", "Battery Storage", "LAKEL1", 50.0],
+    # Pumped hydro stores energy too, but it is hydro, not a battery.
+    ["Kappa", "Pump Hill", "NSW1", "Load", "Scheduled",
+     "Water", "Hydro - Pump", "PUMP1", 240.0],
+]
+
+
+def test_every_unit_with_a_region_is_classified():
+    units = {unit["duid"]: unit["fuel_group"] for unit in extract_units(workbook_bytes())}
+    assert units == {
+        "EXWF1": "wind", "EXWF2": "wind", "HILLWF1": "wind", "ISLWF1": "wind",
+        "COAL1": "other", "SOLAR1": "solar",
+        "HPR1": "battery", "BATT1": "battery", "BDU1": "battery",
+    }  # NOREGION1 has no NEM region, so it is not a NEM unit
+
+
+def test_battery_filed_under_wind_is_a_battery():
+    unit = next(u for u in extract_units(workbook_bytes()) if u["duid"] == "HPR1")
+    assert unit["fuel_group"] == "battery"
+    assert unit["fuel_type"] == "Wind"  # AEMO's own label is kept verbatim
+
+
+def test_generator_and_load_duids_of_one_battery_share_a_station_id():
+    units = extract_units(workbook_bytes(rows=ROWS + PAIR_ROWS))
+    batteries = {b["duid"]: b for b in battery_rows(units)}
+    assert batteries["LAKEG1"]["station_id"] == batteries["LAKEL1"]["station_id"] == "lake-battery"
+    assert batteries["LAKEL1"]["dispatch_type"] == "Load"
+    assert "PUMP1" not in batteries
+
+
+@pytest.mark.parametrize(
+    "fuel, technology, dispatch, expected",
+    [
+        ("Wind", "Wind - Onshore", "Generator", "wind"),
+        ("Wind", "Battery", "Generator", "battery"),
+        ("Wind", "", "Bidirectional", "battery"),
+        ("Battery storage", "Battery Storage", "Load", "battery"),
+        ("Solar", "Photovoltaic", "Generator", "solar"),
+        ("Water", "Hydro - Pump", "Load", "other"),
+        ("Black Coal", "Steam Sub Critical", "Generator", "other"),
+        ("Natural Gas", "OCGT", "Generator", "other"),
+    ],
+)
+def test_fuel_group(fuel, technology, dispatch, expected):
+    assert fuel_group(fuel, technology, dispatch) == expected
+
+
+def test_storage_mwh_is_read_when_the_column_exists():
+    headers = [*HEADERS, "Max Storage Capacity (MWh)"]
+    rows = [[*row, 200.0 if row[7] == "BATT1" else ""] for row in ROWS]
+    units = {u["duid"]: u for u in extract_units(workbook_bytes(headers=headers, rows=rows))}
+    assert units["BATT1"]["storage_mwh"] == 200.0
+    assert units["HPR1"]["storage_mwh"] is None
+
+
+def test_storage_mwh_is_blank_when_the_column_is_absent():
+    assert all(u["storage_mwh"] is None for u in extract_units(workbook_bytes()))
+
+
+def test_battery_and_unit_files_have_stable_headers(tmp_path):
+    units = extract_units(workbook_bytes())
+    write_csv(units, tmp_path / "units.csv", UNITS_HEADER)
+    write_csv(battery_rows(units), tmp_path / "battery_duids.csv", BATTERY_HEADER)
+    assert (tmp_path / "units.csv").read_text().splitlines()[0] == ",".join(UNITS_HEADER)
+    battery_lines = (tmp_path / "battery_duids.csv").read_text().splitlines()
+    assert battery_lines[0] == ",".join(BATTERY_HEADER)
+    assert [line.split(",")[0] for line in battery_lines[1:]] == ["BATT1", "BDU1", "HPR1"]
+
+
+def test_wind_registry_is_unchanged_by_the_unit_list():
+    # The typed list is additive: wind_duids.csv keeps exactly the rows it had.
+    assert [r["duid"] for r in extract_wind(workbook_bytes()).kept] == [
+        "EXWF1", "EXWF2", "HILLWF1", "ISLWF1",
+    ]

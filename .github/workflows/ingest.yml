@@ -140,7 +140,8 @@ jobs:
     # because this job cannot touch data/bronze.
     if: always()
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # Silver after a month's backfill writes ~30 days in one run.
+    timeout-minutes: 40
 
     steps:
       - uses: actions/checkout@v4
@@ -188,6 +189,15 @@ jobs:
         if: steps.quality.outcome == 'success'
         run: python scripts/build_gold.py
 
+      - name: Score the baselines
+        # The bar a model must clear, recomputed whenever silver moves, so the
+        # committed metrics can never again describe data the repo no longer
+        # holds. Reporting, not gating: a failure here must not cost the run
+        # its silver and gold.
+        if: steps.quality.outcome == 'success'
+        continue-on-error: true
+        run: python scripts/baselines.py
+
       - name: Commit silver and gold
         if: always()
         run: |
@@ -195,9 +205,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A data/silver data/gold
-          if git diff --cached --quiet -- data/silver data/gold; then
-            echo "No new silver or gold."
+          git add -A data/silver data/gold data/ml/baseline_metrics.json
+          if git diff --cached --quiet -- data/silver data/gold data/ml; then
+            echo "No new silver, gold or baseline metrics."
             exit 0
           fi
 

@@ -75,6 +75,22 @@ def _pairs(predicted: list[float], actual: list[float]) -> list[tuple[float, flo
     ]
 
 
+def trimmed_mae(predicted: list[float], actual: list[float], trim: float = 0.01) -> float:
+    """MAE over all but the largest ``trim`` share of absolute errors.
+
+    Reported beside MAE, never instead of it. On a few weeks of data one event
+    can own most of the MAE: on 15 Oct 2026 P5MIN forecast QLD1 at about
+    $23,200/MWh for an hour that settled near $90, and nine rows carried 85% of
+    QLD1's P5MIN error. The trimmed figure says how a predictor does on the
+    other 99%; the untrimmed one says what the tail cost. Both are true.
+    """
+    errors = sorted(abs(p - a) for p, a in _pairs(predicted, actual))
+    if not errors:
+        raise ValueError("no comparable pairs")
+    keep = errors[: max(1, len(errors) - int(len(errors) * trim))]
+    return sum(keep) / len(keep)
+
+
 def regression(predicted: list[float], actual: list[float]) -> Regression:
     """MAE, RMSE and bias, split by whether the actual window held a spike."""
     pairs = _pairs(predicted, actual)
