@@ -134,35 +134,37 @@ class Scored:
     metrics: dict
 
 
-def _view_columns(con: duckdb.DuckDBPyConnection) -> list[str]:
-    """Column names of the assembled view."""
-    return [d[0] for d in con.execute("SELECT * FROM scored LIMIT 0").description]
+def _view_columns(con: duckdb.DuckDBPyConnection, relation: str = "scored") -> list[str]:
+    """Column names of a relation in the assembled connection."""
+    return [d[0] for d in con.execute(f"SELECT * FROM {relation} LIMIT 0").description]
 
 
 def feature_columns(con: duckdb.DuckDBPyConnection) -> list[str]:
-    """Every feature column in the assembled view, keys and targets removed."""
-    names = _view_columns(con)
-    return [
-        n for n in names
-        if n not in NOT_FEATURES and not n.startswith("y_") and n not in _baseline_columns()
-    ]
+    """Every feature column, taken from `features.sql`'s own output.
 
+    Read from `_features` rather than from the joined `scored` view, so that
+    what counts as a feature is decided by the feature model and nothing else.
+    Everything a join adds — the computed baselines, P5MIN, PREDISPATCH — is a
+    comparator by construction and cannot become an input by being added
+    upstream.
 
-def _baseline_columns() -> frozenset[str]:
-    """Baseline predictions are comparators, never inputs.
-
-    They are derived from the same history the features already carry, so
-    feeding them in would teach the model nothing it cannot see — but it would
-    make "the model beat persistence" mean "the model learned to copy
-    persistence", which is not the claim being tested.
+    An earlier version filtered `scored` against a hand-kept list of baseline
+    column names. It worked until the PREDISPATCH baseline arrived: its
+    coverage counter `pd_intervals_120` matched no name on the list and was
+    fed to the model as a 34th feature. Nothing about that was future
+    information, so no leakage test caught it; it was simply a baseline's
+    bookkeeping being treated as a market signal, and it moved NSW1's
+    120-minute MAE enough to make the figure unreadable. A list that has to be
+    extended whenever a baseline is added is the wrong shape for this.
     """
-    out: set[str] = set()
-    for predictors in PREDICTORS.values():
-        for mean_col, spike_col in predictors.values():
-            out.add(mean_col)
-            out.add(spike_col)
-    out |= {"p5_run_datetime", "p5_intervals_60"}
-    return frozenset(out)
+    names = _view_columns(con, "_features")
+    features = [n for n in names if n not in NOT_FEATURES and not n.startswith("y_")]
+    # The joined view must still carry them, or `_frame` would select a column
+    # that is not there and fail per region rather than once, here.
+    missing = set(features) - set(_view_columns(con))
+    if missing:
+        raise FeatureError(f"features absent from the joined grid: {sorted(missing)}")
+    return features
 
 
 def span(con: duckdb.DuckDBPyConnection) -> tuple[datetime, datetime]:
