@@ -181,12 +181,29 @@ def test_capacity_factor_above_limit_fails(tmp_path):
     assert result.findings[0].observed == pytest.approx(1.10, abs=1e-6)
 
 
-def test_negative_capacity_factor_fails(tmp_path):
+def test_inverted_sign_capacity_factor_fails(tmp_path):
+    # -5 of 100 MW is -0.05: a real generation profile with its sign flipped,
+    # which is the registry or convention fault this check is hard for.
     result = run(tmp_path, wind=wind_rows(mw=-5.0, capacity=100.0))[
         "capacity_factor_out_of_range"
     ]
     assert result.status == "fail"
     assert result.findings[0].observed < 0
+
+
+def test_a_parked_farm_drawing_auxiliary_power_passes(tmp_path):
+    """Negative, but by a rounding error's worth, and real.
+
+    Cullerin Range on 2026-08-31 generated nothing all day and drew up to
+    0.09 MW of auxiliary load against 30 MW registered — one farm-day in 4,712,
+    a capacity factor of -0.000427. Failing the whole run on that is the
+    pipeline CLAUDE.md warns about, so the floor sits just below zero and this
+    pins which side of it a parked farm falls on.
+    """
+    result = run(tmp_path, wind=wind_rows(mw=-0.09, capacity=30.0))[
+        "capacity_factor_out_of_range"
+    ]
+    assert result.status == "pass"
 
 
 def test_capacity_factor_at_the_limit_passes(tmp_path):
