@@ -50,9 +50,15 @@ INTERVALS_PER_DAY: Final = 288
 # Two hours of five-minute intervals.
 MAX_MISSING_INTERVALS: Final = 24
 
-# Capacity factor cannot be negative over a whole day, and 1.05 allows for a
-# farm genuinely out-rating its nameplate without tolerating a stale registry.
-CF_MIN: Final = 0.0
+# 1.05 allows for a farm genuinely out-rating its nameplate without tolerating
+# a stale registry. The floor is slightly below zero because an idle wind farm
+# draws auxiliary power: Cullerin Range on 2026-08-31 generated nothing all day
+# (peak 0.0 MW) and drew up to 0.09 MW across 98 intervals, for -0.31 MWh and a
+# capacity factor of -0.000427 — one farm-day in 4,712. That is a parked farm,
+# not the registry or sign-convention fault this check is hard for, and 0.09 of
+# 30 MW is 0.3% of nameplate. An inverted sign would mirror a real generation
+# profile and land near -0.1 to -0.5, so -0.01 separates the two cleanly.
+CF_MIN: Final = -0.01
 CF_MAX: Final = 1.05
 
 # Prices outside this band are real but rare enough to be worth a look.

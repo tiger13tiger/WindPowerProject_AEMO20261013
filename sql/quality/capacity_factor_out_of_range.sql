@@ -1,12 +1,18 @@
--- HARD: daily capacity factor must lie within [0, 1.05].
+-- HARD: daily capacity factor must lie within [-0.01, 1.05].
 --
 -- Capacity factor is daily MWh divided by what the farm could have produced
--- flat out. Below zero means a farm consumed more than it generated across a
--- whole day, which is not a curtailment story but a sign the registry capacity
--- or the MW sign convention is wrong. Above 1.05 means output exceeded
+-- flat out. Materially below zero means a farm consumed more than it generated
+-- across a whole day, which is not a curtailment story but a sign the registry
+-- capacity or the MW sign convention is wrong. Above 1.05 means output exceeded
 -- nameplate all day, so the registered capacity is almost certainly stale.
 -- Both are registry faults rather than data faults, and both corrupt every
 -- comparison between farms.
+--
+-- The floor is not zero, because an idle farm legitimately draws auxiliary
+-- power and the resulting capacity factor is negative by a rounding error's
+-- worth. See CF_MIN in check_quality.py for the farm-day that set it. Failing
+-- the run on -0.000427 would be the pipeline CLAUDE.md warns about: one that
+-- rejects genuinely strange but real NEM values until nobody trusts it.
 --
 -- Computed from silver here. When gold's farm_daily exists this should read
 -- that table instead, so the published figure is the one being checked.
